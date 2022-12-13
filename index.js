@@ -1,6 +1,32 @@
+// 
+// our two sum function which will return
+// all pairs in the arrayay that sum up to S
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+
+  var sums = [];
+
+  // check each element in arrayay
+  for (var i = 0; i < array.length; i++) { 
+
+    // check each other element in the arrayay
+    for (var j = i + 1; j < array.length; j++) {
+
+      // determine if these two elements sum to S
+      if (array[i] + array[j] === target) {
+        sums.push([array[i], array[j]]);
+      }
+
+    }
+
+  }
+
+  // return all pairs of integers that sum to target
+  return true;
+
 }
+
+hasTargetSum([3, 8, 12, 4, 11, 7], 10);  
+    
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +34,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  start
+  check each element in arrayay
+
 */
 
 /*
