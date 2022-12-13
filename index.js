@@ -1,17 +1,15 @@
-// 
-// our two sum function which will return
-// all pairs in the arrayay that sum up to S
-function hasTargetSum(array, target) {
 
+function hasTargetSum(array, target) {
+//Write your algorithm here
   var sums = [];
 
-  // check each element in arrayay
+  // check each element in array
   for (var i = 0; i < array.length; i++) { 
 
-    // check each other element in the arrayay
+    // check each other element in the array
     for (var j = i + 1; j < array.length; j++) {
 
-      // determine if these two elements sum to S
+      // determine if these two elements sum to target
       if (array[i] + array[j] === target) {
         sums.push([array[i], array[j]]);
       }
