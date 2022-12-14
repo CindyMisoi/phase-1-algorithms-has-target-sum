@@ -1,30 +1,16 @@
 
 function hasTargetSum(array, target) {
-//Write your algorithm here
-  var sums = [];
-
-  // check each element in array
-  for (var i = 0; i < array.length; i++) { 
-
-    // check each other element in the array
-    for (var j = i + 1; j < array.length; j++) {
-
-      // determine if these two elements sum to target
-      if (array[i] + array[j] === target) {
-        sums.push([array[i], array[j]]);
-      }
-
-    }
-
+  // Write your algorithm here
+  for (i = 0; i <array.length; i++)
+  for(j = 0; j < array.length; j++)
+  if(array[i] + array[j] === target) {
+    return true;
+  } else if (array[i] + array[i] === target|| array[j] + array[j] === target) {
+    return false;
+  } else if (array.length === 1) {
+    return false;
   }
-
-  // return all pairs of integers that sum to target
-  return true;
-
 }
-
-hasTargetSum([3, 8, 12, 4, 11, 7], 10);  
-    
 
 /* 
   Write the Big O time complexity of your function here
@@ -32,9 +18,6 @@ hasTargetSum([3, 8, 12, 4, 11, 7], 10);
 
 /* 
   Add your pseudocode here
-  start
-  check each element in arrayay
-
 */
 
 /*
